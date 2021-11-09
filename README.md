@@ -1,6 +1,6 @@
-<h1 align="center">***DOCUMENTATION***</h1>
+<h1 align="center">DOCUMENTATION</h1>
 
-
+> **LINK --> [https://node-auth-server.herokuapp.com/users](https://node-auth-server.herokuapp.com/users)**
 
 
 > **GET**
