@@ -4,19 +4,19 @@
 
 
 > **GET**
-> /users -> home page
+> ***/users*** -> home page
 
 ***
 
 > **GET**
-> /users/usersList -> list of all registered users 
+> ***/users/usersList*** -> list of all registered users 
 
 ***
 
 > **POST**
-> /users/register
+> ***/users/register***
 
-> e.g.
+> **e.g.**
 > 
 > {
 > 
@@ -35,9 +35,9 @@
 ***
 
 > **POST**
-> /users/login
+> ***/users/login***
 
-> e.g.
+> **e.g.**
 >
 > {
 >
