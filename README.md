@@ -3,46 +3,51 @@
 
 
 
-GET
-/users -> home page
+> **GET**
+> /users -> home page
 
+***
 
-GET
-/users/usersList -> list of all registered users 
+> **GET**
+> /users/usersList -> list of all registered users 
 
+***
 
-POST
-/users/register
+> **POST**
+> /users/register
 
-e.g.
+> e.g.
+> 
+> {
+> 
+>
+>  "username": "your-username",
+>  
+>  
+>  "email": "your-email",
+>  
+>  
+>  "password": "your-password"
+>
+>
+> }
 
-{
-  
-  
-  "username": "your-username",
-  
-  
-  "email": "your-email",
-  
-  
-  "password": "your-password"
+***
 
+> **POST**
+> /users/login
 
-}
+> e.g.
+>
+> {
+>
+>  
+>  "email": "your-email",
+>  
+>  
+>  "password": "your-password"
+>
+>
+> }
 
-
-POST
-/users/login
-
-e.g.
-
-{
-
-  
-  "email": "your-email",
-  
-  
-  "password": "your-password"
-
-
-}
+***
