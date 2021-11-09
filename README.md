@@ -1,4 +1,4 @@
-<h1 text-align="center">DOCUMENTATION</h1>
+<h1 align="center">DOCUMENTATION</h1>
 
 
 
