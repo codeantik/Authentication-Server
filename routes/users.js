@@ -1,5 +1,6 @@
 const express = require("express");
 const User = require("../models/User");
+const Comment = require("../models/Comment");
 const debug = require("debug")("codeantik-express:server");
 
 const router = express.Router();
@@ -97,14 +98,25 @@ router.post("/login", (req, res, next) => {
 
 router.get("/usersList", function (req, res) {
 	User.find({}, function (err, users) {
-		let userMap = {};
-
-		users.forEach(function (user) {
-			userMap[user._id] = user;
-		});
-
-		return res.send(userMap);
+		return res.send(users);
 	});
 });
+
+router.post('/comments', (req, res) => {
+	const comment = new Comment({
+		comment: req.body.comment,
+	})
+	comment.save().then(() => {
+		return res.status(201).json({ message: 'Comment successfully added' });
+	}).catch((err) => {
+		return res.status(500).json({ message: `Error: ${err}` });
+	})
+})
+
+router.get('/comments', (req, res) => {
+	Comment.find({}, (err, comments) => {
+		return res.send(comments);
+	})
+})
 
 module.exports = router;
